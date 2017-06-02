@@ -66,9 +66,9 @@ CREATE TRIGGER CHECK_TKDG
  BEGIN
  DECLARE @TENTKDG Nvarchar(30),@TENTK Nvarchar(30)
 	SET @TENTKDG=(select TENTKDG from inserted)
-	if(@TENTKDG NOT IN(SELECT TENTK FROM TAIKHOAN)) 
+	if(@TENTKDG IN(SELECT TENTK FROM TAIKHOAN)) 
 	BEGIN
-		print 'tentktt phai khac tentkdg'
+		print ' Ten tai khoan doc gia khong duoc trung nhau'
 		rollback TRAN	
 	END
  END

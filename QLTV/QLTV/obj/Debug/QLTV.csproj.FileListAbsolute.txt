@@ -1,0 +1,12 @@
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\QLTV.exe.config
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\QLTV.exe
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\QLTV.pdb
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.csprojResolveAssemblyReference.cache
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.Dangnhap.resources
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.FormChinh.resources
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.QuenMatKhau.resources
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.Cache
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.exe
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.pdb
+E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.TaoTaiKhoan.resources

@@ -35,39 +35,49 @@ namespace ThanhVien
             get { return strMSSV; }
             set { strMSSV = value; }
         }
-        public void Nhap( )
+        public void Nhap()
         {
             SqlConnection connect = new SqlConnection();
             connect.ConnectionString = ConnectToSQL.ConnectionSQL;
             connect.Open();
-            SqlCommand command = new SqlCommand("ThemDocGia", connect);
+            SqlCommand command = new SqlCommand("dbo.ThemDocGia", connect);
             command.CommandType = System.Data.CommandType.StoredProcedure;
 
-
-            SqlParameter p = new SqlParameter("@MaDOCGIA", strMaDocGia);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@HOTEN", strHoTen);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@NGAYSINH", strNgSinh);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@QUEQUAN", strQueQuan);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@DIACHI", strDiaChi);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@CMNN", strCMND);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@MSSV", strMSSV);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@Email", strEmail);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@TENTKDG", strTenTK);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@GIOITINH", strGioiTinh);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@NGAYTAO", strNgayTao);
-            command.Parameters.Add(p);
-            p = new SqlParameter("@MATKHAU", strMatKhau);
-            command.Parameters.Add(p);
+            SqlParameter p;
+            try
+            {
+                p = new SqlParameter("@MaDOCGIA", strMaDocGia);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@HOTEN", strHoTen);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@NGAYSINH", strNgSinh);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@QUEQUAN", strQueQuan);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@DIACHI", strDiaChi);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@CMNN", strCMND);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@MSSV", strMSSV);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@Email", strEmail);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@TENTKDG", strTenTK);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@GIOITINH", strGioiTinh);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@NGAYTAO", strNgayTao);
+                command.Parameters.Add(p);
+                p = new SqlParameter("@MATKHAU", strMatKhau);
+                command.Parameters.Add(p);
+                command.ExecuteNonQuery();
+                command.Dispose();
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            connect.Close();
         }
     }
 }

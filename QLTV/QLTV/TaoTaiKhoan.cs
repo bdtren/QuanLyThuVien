@@ -56,8 +56,7 @@ namespace QLTV
             strMaDocGia = "DG001";
             strNgayTao = DateTime.Now.ToString();
             DocGia dg = new DocGia(strMaDocGia, strGioiTinh, strMSSV, strHoTen, strNgSinh, strQueQuan, strDiaChi, strCMND, strEmail, strNgayTao, strTenTK, strMatKhau);
-            MessageBox.Show(dg.MADOCGIA+"  "+dg.HOTEN);
-            //dg.Nhap();
+            dg.Nhap();
         }
         private void TaoTaiKhoan_Load(object sender, EventArgs e)
         {

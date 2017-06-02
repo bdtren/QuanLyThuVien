@@ -17,6 +17,24 @@ namespace QLTV
             InitializeComponent();
         }
 
+        public FormChinh(string loai)
+        {
+            try
+            {
+                if (loai == "DG")
+                {
+                    //mnuSach.Visible = mnuHoatdong.Visible = true;
+                }
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+            
+
+        }
         private void FormChinh_Load(object sender, EventArgs e)
         {
             tabs.Controls.Remove(tabPage2);
@@ -31,6 +49,16 @@ namespace QLTV
             fr.FormBorderStyle = FormBorderStyle.None;
             fr.Dock = DockStyle.Fill;
             tabs.TabPages[0].Controls.Add(fr);
+        }
+
+        private void FormChinh_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void mniThongtin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

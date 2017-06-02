@@ -12,7 +12,9 @@ namespace ThanhVien
 {
     public abstract class ThanhVien
     {
-        protected string strHoTen, strGioiTinh, strNgSinh, strQueQuan, strDiaChi, strCMND, strEmail, strNgayTao, strTenTK, strMatKhau;
+        protected string strHoTen, strGioiTinh, strNgSinh, strQueQuan, strDiaChi, 
+            strCMND, strEmail, strNgayTao, strTenTK, strMatKhau, strSDT;
+
         public ThanhVien()
         {
             strHoTen = null;
@@ -25,9 +27,10 @@ namespace ThanhVien
             strNgayTao = null;
             strTenTK = null;
             strMatKhau = null;
+            strSDT = null;
         }
 
-        public ThanhVien(string strHoTen, string strGioiTinh, string strNgSinh, string strQueQuan, string strDiaChi, string strCMND, string strEmail, string strNgayTao, string strTenTK, string strMatKhau)
+        public ThanhVien(string strHoTen, string strGioiTinh, string strNgSinh, string strQueQuan, string strDiaChi, string strCMND, string strEmail, string strNgayTao, string strTenTK, string strMatKhau, string strSDT)
         {
             this.strHoTen = strHoTen;
             this.strNgSinh = strNgSinh;
@@ -39,6 +42,7 @@ namespace ThanhVien
             this.strEmail = strEmail;
             this.strTenTK = strTenTK;
             this.strMatKhau = strMatKhau;
+            this.strSDT = strSDT;
         }
 
         public string HOTEN
@@ -97,6 +101,9 @@ namespace ThanhVien
             get { return strMatKhau; }
             set { strMatKhau = value; }
         }
+
+        protected string StrSDT { get { return strSDT; }
+            set { strSDT = value; } }
 
         ////////////////////
         ///// có hay không hai hàm nhập xuất đang còn phân vân 

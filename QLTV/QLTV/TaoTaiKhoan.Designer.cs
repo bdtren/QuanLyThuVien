@@ -120,7 +120,7 @@
             this.dtmNgaysinh.Location = new System.Drawing.Point(110, 70);
             this.dtmNgaysinh.Name = "dtmNgaysinh";
             this.dtmNgaysinh.Size = new System.Drawing.Size(140, 20);
-            this.dtmNgaysinh.TabIndex = 4;
+            this.dtmNgaysinh.TabIndex = 3;
             this.dtmNgaysinh.Value = new System.DateTime(2017, 6, 2, 9, 6, 59, 0);
             // 
             // rdoNu
@@ -129,7 +129,7 @@
             this.rdoNu.Location = new System.Drawing.Point(540, 33);
             this.rdoNu.Name = "rdoNu";
             this.rdoNu.Size = new System.Drawing.Size(39, 17);
-            this.rdoNu.TabIndex = 3;
+            this.rdoNu.TabIndex = 2;
             this.rdoNu.TabStop = true;
             this.rdoNu.Text = "Nữ";
             this.rdoNu.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.rdoNam.Location = new System.Drawing.Point(463, 33);
             this.rdoNam.Name = "rdoNam";
             this.rdoNam.Size = new System.Drawing.Size(47, 17);
-            this.rdoNam.TabIndex = 3;
+            this.rdoNam.TabIndex = 1;
             this.rdoNam.TabStop = true;
             this.rdoNam.Text = "Nam";
             this.rdoNam.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             this.dtmNgaytao.Location = new System.Drawing.Point(374, 272);
             this.dtmNgaytao.Name = "dtmNgaytao";
             this.dtmNgaytao.Size = new System.Drawing.Size(100, 20);
-            this.dtmNgaytao.TabIndex = 2;
+            this.dtmNgaytao.TabIndex = 16;
             this.dtmNgaytao.Value = new System.DateTime(2017, 6, 2, 9, 6, 59, 0);
             // 
             // lblSdt
@@ -278,7 +278,8 @@
             this.cboDCTinh.Location = new System.Drawing.Point(575, 140);
             this.cboDCTinh.Name = "cboDCTinh";
             this.cboDCTinh.Size = new System.Drawing.Size(121, 21);
-            this.cboDCTinh.TabIndex = 1;
+            this.cboDCTinh.TabIndex = 7;
+            this.cboDCTinh.SelectedIndexChanged += new System.EventHandler(this.cboDCTinh_SelectedIndexChanged);
             // 
             // cboDCHuyen
             // 
@@ -286,7 +287,8 @@
             this.cboDCHuyen.Location = new System.Drawing.Point(427, 141);
             this.cboDCHuyen.Name = "cboDCHuyen";
             this.cboDCHuyen.Size = new System.Drawing.Size(121, 21);
-            this.cboDCHuyen.TabIndex = 1;
+            this.cboDCHuyen.TabIndex = 7;
+            this.cboDCHuyen.SelectedIndexChanged += new System.EventHandler(this.cboDCHuyen_SelectedIndexChanged);
             // 
             // cboQQTinh
             // 
@@ -294,7 +296,8 @@
             this.cboQQTinh.Location = new System.Drawing.Point(575, 105);
             this.cboQQTinh.Name = "cboQQTinh";
             this.cboQQTinh.Size = new System.Drawing.Size(121, 21);
-            this.cboQQTinh.TabIndex = 1;
+            this.cboQQTinh.TabIndex = 4;
+            this.cboQQTinh.SelectedIndexChanged += new System.EventHandler(this.cboQQTinh_SelectedIndexChanged);
             // 
             // cboQQHuyen
             // 
@@ -302,7 +305,8 @@
             this.cboQQHuyen.Location = new System.Drawing.Point(427, 105);
             this.cboQQHuyen.Name = "cboQQHuyen";
             this.cboQQHuyen.Size = new System.Drawing.Size(121, 21);
-            this.cboQQHuyen.TabIndex = 1;
+            this.cboQQHuyen.TabIndex = 5;
+            this.cboQQHuyen.SelectedIndexChanged += new System.EventHandler(this.cboQQHuyen_SelectedIndexChanged);
             // 
             // cboQQXa
             // 
@@ -310,7 +314,8 @@
             this.cboQQXa.Location = new System.Drawing.Point(283, 105);
             this.cboQQXa.Name = "cboQQXa";
             this.cboQQXa.Size = new System.Drawing.Size(121, 21);
-            this.cboQQXa.TabIndex = 1;
+            this.cboQQXa.TabIndex = 6;
+            this.cboQQXa.SelectedIndexChanged += new System.EventHandler(this.cboQQXa_SelectedIndexChanged);
             // 
             // cboDCXa
             // 
@@ -318,32 +323,35 @@
             this.cboDCXa.Location = new System.Drawing.Point(283, 141);
             this.cboDCXa.Name = "cboDCXa";
             this.cboDCXa.Size = new System.Drawing.Size(121, 21);
-            this.cboDCXa.TabIndex = 1;
+            this.cboDCXa.TabIndex = 8;
+            this.cboDCXa.SelectedIndexChanged += new System.EventHandler(this.cboDCXa_SelectedIndexChanged);
             // 
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(635, 304);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 0;
+            this.btnThoat.TabIndex = 19;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.Location = new System.Drawing.Point(540, 304);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
-            this.btnHuy.TabIndex = 0;
+            this.btnHuy.TabIndex = 18;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(435, 304);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 0;
+            this.btnThem.TabIndex = 17;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -353,21 +361,21 @@
             this.txtMatKhau.Location = new System.Drawing.Point(374, 242);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(100, 20);
-            this.txtMatKhau.TabIndex = 0;
+            this.txtMatKhau.TabIndex = 14;
             // 
             // txtMSSV
             // 
             this.txtMSSV.Location = new System.Drawing.Point(374, 211);
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.Size = new System.Drawing.Size(100, 20);
-            this.txtMSSV.TabIndex = 0;
+            this.txtMSSV.TabIndex = 12;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(374, 185);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 10;
             // 
             // txtMaDG
             // 
@@ -375,42 +383,42 @@
             this.txtMaDG.Location = new System.Drawing.Point(110, 286);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Size = new System.Drawing.Size(140, 20);
-            this.txtMaDG.TabIndex = 0;
+            this.txtMaDG.TabIndex = 15;
             // 
             // txtTK
             // 
             this.txtTK.Location = new System.Drawing.Point(110, 252);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(140, 20);
-            this.txtTK.TabIndex = 0;
+            this.txtTK.TabIndex = 13;
             // 
             // txtCMND
             // 
             this.txtCMND.Location = new System.Drawing.Point(110, 222);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(140, 20);
-            this.txtCMND.TabIndex = 0;
+            this.txtCMND.TabIndex = 11;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(110, 179);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(140, 20);
-            this.txtSDT.TabIndex = 0;
+            this.txtSDT.TabIndex = 9;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(110, 141);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(140, 20);
-            this.txtDiaChi.TabIndex = 0;
+            this.txtDiaChi.TabIndex = 20;
             // 
             // txtQueQuan
             // 
             this.txtQueQuan.Location = new System.Drawing.Point(110, 105);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(140, 20);
-            this.txtQueQuan.TabIndex = 0;
+            this.txtQueQuan.TabIndex = 20;
             // 
             // txtHoten
             // 

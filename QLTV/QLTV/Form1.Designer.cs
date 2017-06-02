@@ -48,7 +48,7 @@
             this.llblquenmatkhau.Location = new System.Drawing.Point(192, 151);
             this.llblquenmatkhau.Name = "llblquenmatkhau";
             this.llblquenmatkhau.Size = new System.Drawing.Size(80, 13);
-            this.llblquenmatkhau.TabIndex = 23;
+            this.llblquenmatkhau.TabIndex = 5;
             this.llblquenmatkhau.TabStop = true;
             this.llblquenmatkhau.Text = "Quên mật khẩu";
             // 
@@ -58,27 +58,30 @@
             this.llbldangky.Location = new System.Drawing.Point(139, 151);
             this.llbldangky.Name = "llbldangky";
             this.llbldangky.Size = new System.Drawing.Size(47, 13);
-            this.llbldangky.TabIndex = 22;
+            this.llbldangky.TabIndex = 4;
             this.llbldangky.TabStop = true;
             this.llbldangky.Text = "Đăng ký";
+            this.llbldangky.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbldangky_LinkClicked);
             // 
             // btndangnhap
             // 
             this.btndangnhap.Location = new System.Drawing.Point(102, 176);
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.Size = new System.Drawing.Size(82, 23);
-            this.btndangnhap.TabIndex = 20;
+            this.btndangnhap.TabIndex = 6;
             this.btndangnhap.Text = "Đăng nhập";
             this.btndangnhap.UseVisualStyleBackColor = true;
+            this.btndangnhap.Click += new System.EventHandler(this.btndangnhap_Click);
             // 
             // btnthoat
             // 
             this.btnthoat.Location = new System.Drawing.Point(206, 176);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(82, 23);
-            this.btnthoat.TabIndex = 21;
+            this.btnthoat.TabIndex = 7;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // picxacthuc
             // 
@@ -95,21 +98,21 @@
             this.txtxacthuc.Location = new System.Drawing.Point(102, 128);
             this.txtxacthuc.Name = "txtxacthuc";
             this.txtxacthuc.Size = new System.Drawing.Size(186, 20);
-            this.txtxacthuc.TabIndex = 18;
+            this.txtxacthuc.TabIndex = 3;
             // 
             // txtmatkhau
             // 
             this.txtmatkhau.Location = new System.Drawing.Point(102, 61);
             this.txtmatkhau.Name = "txtmatkhau";
             this.txtmatkhau.Size = new System.Drawing.Size(186, 20);
-            this.txtmatkhau.TabIndex = 16;
+            this.txtmatkhau.TabIndex = 2;
             // 
             // txttaikhoan
             // 
             this.txttaikhoan.Location = new System.Drawing.Point(102, 25);
             this.txttaikhoan.Name = "txttaikhoan";
             this.txttaikhoan.Size = new System.Drawing.Size(186, 20);
-            this.txttaikhoan.TabIndex = 17;
+            this.txttaikhoan.TabIndex = 1;
             // 
             // lblxacthuc
             // 
@@ -140,6 +143,7 @@
             // 
             // Dangnhap
             // 
+            this.AcceptButton = this.btndangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 216);
@@ -156,6 +160,7 @@
             this.Controls.Add(this.lbltaikhoan);
             this.Name = "Dangnhap";
             this.Text = "Đăng nhập";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Dangnhap_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.picxacthuc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

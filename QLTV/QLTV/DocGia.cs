@@ -119,48 +119,45 @@ namespace ThanhVien
         {
             SqlConnection connect = new SqlConnection();
             connect.ConnectionString = ConnectToSQL.ConnectionSQL;
-            connect.Open();
-            SqlCommand command = new SqlCommand("dbo.ThemDocGia", connect);
+             connect.Open();
+            SqlCommand command = new SqlCommand("ThemDocGia", connect);
             command.CommandType = System.Data.CommandType.StoredProcedure;
 
             SqlParameter p;
-            try
-            {
-                p = new SqlParameter("@MaDOCGIA", strMaDocGia);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@HOTEN", strHoTen);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@NGAYSINH", strNgSinh);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@QUEQUAN", strQueQuan);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@DIACHI", strDiaChi);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@CMNN", strCMND);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@MSSV", strMSSV);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@Email", strEmail);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@TENTKDG", strTenTK);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@GIOITINH", strGioiTinh);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@NGAYTAO", strNgayTao);
-                command.Parameters.Add(p);
-                strMatKhau = GetMd5Hash(MD5.Create(), strMatKhau);
-                p = new SqlParameter("@MATKHAU", strMatKhau);
-                command.Parameters.Add(p);
-                p = new SqlParameter("@SDT", strSDT);
-                command.Parameters.Add(p);
-                command.ExecuteNonQuery();
-                command.Dispose();
-            }
-            catch (Exception ex)
-            {
-                
-            }
+            DateTime Ngaysinh, NgayTao;
+            Ngaysinh = Convert.ToDateTime(strNgSinh);
+            NgayTao = Convert.ToDateTime(strNgayTao);
+            p = new SqlParameter("@MaDOCGIA", strMaDocGia);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@HOTEN", strHoTen);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@NGAYSINH", Ngaysinh);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@QUEQUAN", strQueQuan);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@DIACHI", strDiaChi);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@CMNN", strCMND);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@MSSV", strMSSV);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@Email", strEmail);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@TENTKDG", strTenTK);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@GIOITINH", strGioiTinh);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@NGAYTAO", NgayTao);
+            command.Parameters.Add(p);
+            strMatKhau = GetMd5Hash(MD5.Create(), strMatKhau);
+            p = new SqlParameter("@MATKHAU", strMatKhau);
+            command.Parameters.Add(p);
+            p = new SqlParameter("@SDT", strSDT);
+            command.Parameters.Add(p);
+            command.ExecuteNonQuery();
+
             connect.Close();
+         
         }
 
         //chuyen ma sang md5

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThanhVien;
+using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace QLTV
 {
@@ -20,8 +22,8 @@ namespace QLTV
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string strHoTen, strGioiTinh = "Nam", strNgSinh, strQueQuan, strDiaChi, strCMND, strEmail,
-                strNgayTao, strTenTK, strMatKhau, strMaDocGia, strMSSV, strSDT;
+            string strHoTen ="", strGioiTinh = "Nam", strNgSinh = "", strQueQuan = "", strDiaChi = "", strCMND = "",
+                strEmail = "", strNgayTao = "", strTenTK = "", strMatKhau = "", strMaDocGia = "", strMSSV = "", strSDT = "";
             try
             {
                 strHoTen = txtHoten.Text;
@@ -34,11 +36,17 @@ namespace QLTV
                 strTenTK = txtTK.Text;
                 strMatKhau = txtMatKhau.Text;
                 strMSSV = txtMSSV.Text;
-
             }
             catch
             {
 
+            }
+            if (strHoTen == "" || strNgSinh == "" || strQueQuan == ""|| strDiaChi == "" || strCMND == "" || 
+                strEmail == "" || strNgayTao == "" || strTenTK == "" || strMatKhau == "" || strMaDocGia == "" ||
+                strMSSV == "" || strSDT == "")
+            {
+                MessageBox.Show(this, "Nhập không đúng, yêu cầu nhập lại!", "Lỗi", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
             }
             if (rdoNu.Checked == true)
             {
@@ -85,12 +93,24 @@ namespace QLTV
             
             strNgayTao = DateTime.Now.ToString();
             DocGia dg = new DocGia(strMaDocGia, strGioiTinh, strMSSV, strHoTen, strNgSinh,
-                strQueQuan, strDiaChi, strCMND, strEmail, strNgayTao, strTenTK, strMatKhau,strSDT);
+               strQueQuan, strDiaChi, strCMND, strEmail, strNgayTao, strTenTK, strMatKhau,strSDT);
             dg.Nhap();
-
-            MessageBox.Show("Tạo tài khoản thành công!");
+            MessageBox.Show(this, "Tạo tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
+        static string GetMd5Hash(MD5 md5Hash, string input)
+        {
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            StringBuilder sBuilder = new StringBuilder();
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            return sBuilder.ToString();
+        }
         private void TaoTaiKhoan_Load(object sender, EventArgs e)
         {
             rdoNam.Checked = true;

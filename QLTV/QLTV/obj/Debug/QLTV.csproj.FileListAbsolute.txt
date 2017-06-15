@@ -10,3 +10,13 @@ E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.Cache
 E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.exe
 E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.pdb
 E:\Projects\CSharp\QLTV\QLTV\obj\Debug\QLTV.TaoTaiKhoan.resources
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\Microsoft.CSharp.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.Data.DataSetExtensions.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.Data.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.Deployment.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.Drawing.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.Windows.Forms.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.Xml.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\System.Xml.Linq.dll
+E:\Projects\CSharp\QLTV\QLTV\bin\Debug\DataBase\QuanLyThuVien.mdf
